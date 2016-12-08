@@ -1,0 +1,15 @@
+Package: KDVizUN
+Type: Package
+Title: Knowledge Domain Visualization (UN)
+Version: 0.1.2
+Date: 2016-11-28
+Author: Andres Palacios <anfpalacioscl@unal.edu.co>
+Maintainer: Andres Palacios <anfpalacioscl@unal.edu.co>
+Description: Knowledge domain visualization using mpa co-words method as the word clustering method.
+License: GPL (>= 2)
+Encoding: UTF-8
+LazyData: TRUE
+RoxygenNote: 5.0.1
+Imports: ade4, mpa, rvest, xml2, tm, stringr, FactoClass
+NeedsCompilation: no
+Packaged: 2016-12-03 18:26:34 UTC; andre
