@@ -15,13 +15,13 @@
 #' @examples
 #' \dontrun{
 #' rm(list = ls())
-#' library("KDVizUN")
+#' library("KDViz")
 #'
-#' risFile <- system.file("ScienceDirectRIS.ris", package = "KDVizUN") # Original data
+#' risFile <- system.file("ScienceDirectRIS.ris", package = "KDViz") # Original data
 #'
 #' myData <- ReadRIS(risFile, "bibDataRIS", saveRda = TRUE, saveCSV = FALSE) # RIS file to data object
 #'
-#' bibData <- system.file("bibData.Rda", package = "KDVizUN")
+#' bibData <- system.file("bibData.Rda", package = "KDViz")
 #' load(bibData)
 #'
 #'
@@ -35,10 +35,10 @@
 #' bibUnits <- c("Keywords") # Selection of bibliometric units to analyze
 #' controlList <- c("stripWhitespace", "removeNumbers") # List of tm process to perform
 #' stopwords <- FALSE # Decide which stopwords are going to be used (file or FALSE if they are not required)
-#' #stopwords <- system.file("stopwords_en.txt", package = "KDVizUN") # Optional
+#' #stopwords <- system.file("stopwords_en.txt", package = "KDViz") # Optional
 #' wordsToRemove <- c("nanotechnology") # List of custom words to remove
 #'
-#' replaceWords <- system.file("keywordReplace.txt", package = "KDVizUN") # Custom dictionary to replace some selected words
+#' replaceWords <- system.file("keywordReplace.txt", package = "KDViz") # Custom dictionary to replace some selected words
 #'
 #' corpus <- CorpusFromBibData(bibData = bibData, bibUnits = bibUnits, controlList = controlList, stopwords = stopwords, wordsToRemove = wordsToRemove, replaceWords = replaceWords) # Corpus from bibdata with and a control list to perform the entire tm process
 #'
@@ -92,7 +92,7 @@
 #' @import ade4
 #' @import FactoClass
 #' @importFrom graphics plot
-KDVizUN <-
+KDViz <-
 function(dtmGroup, graph = FALSE, ex = 1, ey = 2, ucal = 0, cex.row = 0.6, cex.col = 0.7) {
 	coaGroup <- ade4::dudi.coa(dtmGroup, scannf = FALSE, nf = ncol(dtmGroup))
 
