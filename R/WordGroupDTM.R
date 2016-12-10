@@ -24,9 +24,9 @@ function(class, dtm, wordClasses, graph = FALSE) {
 	}
 
 	if(graph) {
-		coaGroup <- KDVizUN(dtmGroup, graph = TRUE)
+		coaGroup <- KDViz(dtmGroup, graph = TRUE)
 	} else {
-		coaGroup <- KDVizUN(dtmGroup, graph = FALSE)
+		coaGroup <- KDViz(dtmGroup, graph = FALSE)
 	}
 
 	WordGroupDTM <- list("dtmGroup" = dtmGroup, "coaGroup" = coaGroup)
