@@ -25,7 +25,9 @@
 #' load(bibData)
 #'
 #'
-#' corpus <- CorpusFromBibData(bibData = bibData, bibUnits = c("Keywords"), controlList = "", stopwords = "", wordsToRemove = "") # Create a corpus from the bib data
+#' # Create a corpus from the bib data
+#' corpus <- CorpusFromBibData(bibData = bibData, bibUnits = c("Keywords"),
+#'    controlList = "", stopwords = "", wordsToRemove = "")
 #'
 #' dtm <- DTMFromCorpus(corpus, row.names(bibData)) # Create a doc-term matrix from the corpus
 #' dim(dtm)
@@ -34,20 +36,28 @@
 #'
 #' bibUnits <- c("Keywords") # Selection of bibliometric units to analyze
 #' controlList <- c("stripWhitespace", "removeNumbers") # List of tm process to perform
-#' stopwords <- FALSE # Decide which stopwords are going to be used (file or FALSE if they are not required)
+#' # Decide which stopwords are going to be used (a file or FALSE if they are not required)
+#' stopwords <- FALSE
 #' #stopwords <- system.file("stopwords_en.txt", package = "KDViz") # Optional
 #' wordsToRemove <- c("nanotechnology") # List of custom words to remove
 #'
-#' replaceWords <- system.file("keywordReplace.txt", package = "KDViz") # Custom dictionary to replace some selected words
+#' # Custom dictionary to replace some selected words
+#' replaceWords <- system.file("keywordReplace.txt", package = "KDViz")
 #'
-#' corpus <- CorpusFromBibData(bibData = bibData, bibUnits = bibUnits, controlList = controlList, stopwords = stopwords, wordsToRemove = wordsToRemove, replaceWords = replaceWords) # Corpus from bibdata with and a control list to perform the entire tm process
+#' # Corpus from bibdata with and a control list to perform the entire tm process
+#' corpus <- CorpusFromBibData(bibData = bibData, bibUnits = bibUnits,
+#'    controlList = controlList, stopwords = stopwords,
+#'    wordsToRemove = wordsToRemove, replaceWords = replaceWords)
 #'
 #' termFreqTable <- TermFrequency(corpus) # See the frequency of terms in the corpus
 #' head(termFreqTable, 98)
 #'
-#' TermFreqByWord(termFreqTable = termFreqTable, word = "reduction") # Search for words containing the term in 'word' parameter
+#' # Search for words containing the term in 'word' parameter
+#' TermFreqByWord(termFreqTable = termFreqTable, word = "reduction")
 #'
-#' #corpus <- ReplaceByList(corpus = corpus, wordsFile = replaceWords) # An optional function (contained yet in the previous process) to replace other words after getting a corpus
+#' # An optional function (contained yet in the previous process) to
+#' #  replace other words after getting a corpus
+#' #corpus <- ReplaceByList(corpus = corpus, wordsFile = replaceWords)
 #'
 #' termFreqTable <- TermFrequency(corpus) # See the frequency of terms in the current corpus
 #' head(termFreqTable, 100)
@@ -62,14 +72,16 @@
 #' mpaWords <- matriz.mpa.corpus(corpus, fmin = 5, cmin = 1) # mpa matrices from a corpus object
 #' mpaWords$Palabras
 #'
-#' classes <- mpa::mpa(mpaWords$Matriza, 10, mpaWords$Palabras) # mpa method from the calculated objects in 'mpaWords'
+#' # mpa method from the calculated objects in 'mpaWords'
+#' classes <- mpa::mpa(mpaWords$Matriza, 10, mpaWords$Palabras)
 #' classes
 #'
 #' kdSummary <- KDSummary(matriz.mpa = mpaWords, mpa = classes) # a quick summary of the mpa process
 #'
 #' mpa::plotmpa(3, mpaWords$Matriza, classes) # Plot the network of selected class
 #'
-#' WordGroupDTM(dtm, wordClasses = kdSummary$wordClasses, class = 7, graph = TRUE) # Extract a partition of the original 'dtm' matrix depending on the class that you want
+#' # Extract a partition of the original 'dtm' matrix depending on the class that you want
+#' WordGroupDTM(dtm, wordClasses = kdSummary$wordClasses, class = 7, graph = TRUE)
 #'
 #' group1 <- WordGroupDTM(dtm, wordClasses = kdSummary$wordClasses, class = 1, graph = TRUE)
 #' group2 <- WordGroupDTM(dtm, wordClasses = kdSummary$wordClasses, class = 2, graph = TRUE)
