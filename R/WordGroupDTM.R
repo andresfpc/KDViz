@@ -26,7 +26,7 @@ function(class, dtm, wordClasses, graph = FALSE) {
 	if(graph) {
 		coaGroup <- KDViz(dtmGroup, graph = TRUE)
 	} else {
-		coaGroup <- KDViz(dtmGroup, graph = FALSE)
+		coaGroup <- KDViz(dtmGroup)
 	}
 
 	WordGroupDTM <- list("dtmGroup" = dtmGroup, "coaGroup" = coaGroup)
