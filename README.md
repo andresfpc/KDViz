@@ -1,10 +1,10 @@
-# KDVizUN
-An R package for Knowledge Domain Visualization (Universidad Nacional de Colombia)
+# KDViz
+An R package for Knowledge Domain Visualization
 
 ### Installing in R
 ```
-install_github("andresfpc/KDVizUN")
+devtools::install_github("andresfpc/KDViz")
 ```
 
 ##Manual
-See the documentation of the package in [this pdf](https://github.com/andresfpc/KDVizUN/blob/master/KDVizUN-manual.pdf)
+See the documentation of the package in [this pdf](https://github.com/andresfpc/KDViz/blob/master/KDViz-manual.pdf)
