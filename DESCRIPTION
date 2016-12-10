@@ -1,6 +1,6 @@
-Package: KDVizUN
+Package: KDViz
 Type: Package
-Title: Knowledge Domain Visualization (UN)
+Title: Knowledge Domain Visualization
 Version: 0.1.2
 Date: 2016-11-28
 Author: Andres Palacios <anfpalacioscl@unal.edu.co>
