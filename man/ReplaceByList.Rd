@@ -21,4 +21,8 @@ A process similar to lemmatization with a custom dictionary file in the form of 
 
 
 }
+\author{
+Camila Góngora \email{mcgongoraa@unal.edu.co},
+Andrés Palacios \email{anfpalacioscl@unal.edu.co}
+}
 

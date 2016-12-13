@@ -10,6 +10,10 @@
 #' @examples
 #' 
 #'
+#' @author
+#' Camila Góngora \email{mcgongoraa@@unal.edu.co},
+#' Andrés Palacios \email{anfpalacioscl@@unal.edu.co}
+#'
 #' @export
 #'
 #' @import tm
