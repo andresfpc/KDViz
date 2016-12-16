@@ -34,14 +34,14 @@ function(keywords, size, addInfo = FALSE, infoList) {
 		keywords <- paste0("{", keywords, "}", collapse = "OR")
 		url <- "http://www.sciencedirect.com/"
 		originalSession <- rvest::html_session(url)
-
+		
 		cat("Performing keyword search...\n")
 		flush.console()
-		searchForm <- rvest::html_form(originalSession)[[3]]
+		searchForm <- rvest::html_form(xml2::read_html(url))[[3]]
 		searchValues <- rvest::set_values(searchForm, qs_all = keywords)
 		originalQuery <- rvest::submit_form(session = originalSession, form = searchValues, submit = "sdSearch")$url
 
-		currentSession <- rvest::jump_to(originalSession, originalQuery)
+		currentSession <- xml2::read_html(originalQuery)
 		
 		resultsFound <- rvest::html_text(rvest::html_node(currentSession, ".queryText"))
 		numberOfArt <- as.numeric(gsub(x = resultsFound, pattern = "[A-z]|\\s+|[:punct:]|[.]|[,]", replacement = ""))
