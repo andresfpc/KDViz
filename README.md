@@ -6,5 +6,5 @@ An R package for Knowledge Domain Visualization
 devtools::install_github("andresfpc/KDViz")
 ```
 
-##Manual
+## Manual
 See the documentation of the package in [this pdf](https://github.com/andresfpc/KDViz/blob/master/KDViz-manual.pdf)
