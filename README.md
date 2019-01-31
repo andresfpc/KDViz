@@ -1,5 +1,7 @@
 This is a first version of the package KDViz, please visit https://cran.r-project.org/package=KDViz for using CRAN release version of the package (v.1.3) or install it directly in R by typing ```install.packages("KDViz", dependencies = TRUE)```.
 
+[![](https://cranlogs.r-pkg.org/badges/KDViz)](https://cran.r-project.org/package=KDViz)
+
 # KDViz (v.0.1.3)
 An R package for Knowledge Domain Visualization
 
